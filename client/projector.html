@@ -1,0 +1,73 @@
+<head>
+  <title>sites-meteor</title>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar">A</span>
+                    <span class="icon-bar">B</span>
+                    <span class="icon-bar">C</span>
+                </a>
+                {{> filter }}
+                <div class="nav-collapse collapse pull-right">
+                    <p class="navbar-text pull-right">
+                        {{ loginButtons }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+    <div id="edit"></div>
+</body>
+
+<template name="title">
+    {{ title }}
+</template>
+
+<template name="filter">
+    {{#if filters }}
+        <div class="brand">
+            Select : <select id="filter">
+                <option{{{ selected 'All' }}}>All</option>
+                {{#each filters }}
+                    {{> filter_option }}
+                {{/each}}
+            </select>
+        </div>
+    {{else }}
+        <a class="brand" href="/">{{> title }}</a>
+    {{/if }}
+</template>
+
+<template name="filter_option">
+    <option{{{ selected }}}>{{ this }}</option>
+</template>
+
+<template name="footer">
+    <footer>
+        <hr>
+        <p>&copy; {{ copyright }} {{ currentPage }}</p>
+    </footer>
+</template>
+
+<template name="links">
+{{#each links }}
+    <a href="{{ url }}" title="{{ name }}">{{ label }}</a> {{ pipe }}
+{{/each }}
+</template>
+
+<template name="group_env">
+</template>
