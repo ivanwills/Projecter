@@ -1,0 +1,42 @@
+
+ol.dates {
+    border  : 0;
+    margin  : 0;
+    padding : 0;
+    border-collapse : collapse ;
+
+    li {
+        display : inline-block;
+        width   : 14%;
+        border  : 0;
+        margin  : 0;
+        padding : 0;
+        border-collapse : collapse ;
+        margin-right    : -5px;
+
+        > div {
+            border  : solid 1px #555;
+        }
+
+        > div.weekend {
+            background-color : #888;
+        }
+        > div.holiday {
+            background-color : #787;
+        }
+
+        .date {
+            border-bottom : 1px solid #555;
+            text-align : center;
+            min-height : 1.5em;
+        }
+        .title {
+            border-bottom : 1px solid #555;
+            text-align : center;
+            min-height : 1.5em;
+        }
+        .hours {
+            min-height : 200px;
+        }
+    }
+}

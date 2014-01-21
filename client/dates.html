@@ -1,0 +1,20 @@
+<template name="dates">
+    <ol class="dates">
+    {{#each dates }}
+        <li>{{> show_date }}</li>
+    {{/each}}
+    </ol>
+</template>
+
+<template name="show_date">
+<div class="{{ class }}">
+    <div class="date">{{ date }}</div>
+    <div class="title">{{ title }}</div>
+    <div class="hours">{{> hours }}</div>
+</div>
+</template>
+
+<template name="hours">
+    <ol class="hours">
+    </ol>
+</template>
