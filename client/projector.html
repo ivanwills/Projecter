@@ -39,9 +39,9 @@
 </template>
 
 <template name="filter">
-    {{#if filters }}
+    {{#if sprints }}
         <div class="brand">
-            Select : <select id="filter">
+            Select : <select id="sprints">
                 <option{{{ selected 'All' }}}>All</option>
                 {{#each filters }}
                     {{> filter_option }}
